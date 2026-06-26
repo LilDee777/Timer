@@ -1,8 +1,8 @@
 .glass-card {
     width: 100%;
     min-width: 0;
-    background: rgba(30, 32, 34, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(15, 26, 55, 0.78);
+    border: 1px solid rgba(140, 184, 255, 0.18);
 }
 
 @media (max-width: 767px) {
@@ -16,8 +16,8 @@
 }
 
 .active-glow {
-    box-shadow: 0 0 50px rgba(255, 61, 0, 0.15);
-    border: 1px solid rgba(255, 61, 0, 0.3);
+    box-shadow: 0 0 50px rgba(94, 125, 255, 0.25);
+    border: 1px solid rgba(94, 125, 255, 0.32);
 }
 
 .ticker-text {
