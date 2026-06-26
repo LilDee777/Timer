@@ -1,0 +1,27 @@
+.glass-card {
+    background: rgba(30, 32, 34, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.active-glow {
+    box-shadow: 0 0 50px rgba(255, 61, 0, 0.15);
+    border: 1px solid rgba(255, 61, 0, 0.3);
+}
+
+.ticker-text {
+    font-variant-numeric: tabular-nums;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.view-transition {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden-view {
+    display: none !important;
+    opacity: 0;
+    transform: translateY(10px);
+}
