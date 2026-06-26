@@ -9,6 +9,10 @@
     .glass-card {
         padding: 1.25rem;
     }
+
+    body {
+        font-size: 15px;
+    }
 }
 
 .active-glow {
