@@ -125,24 +125,24 @@
                     </div>
                     <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2" id="hero-title">Product Launch</h2>
                     <p class="font-body-md text-on-surface-variant mb-10" id="hero-description">The next evolution of Ticker begins.</p>
-                    <div class="flex justify-center items-center gap-4 md:gap-8 ticker-text" id="hero-ticker">
-                        <div class="flex flex-col items-center">
-                            <span class="font-display-lg text-[64px] leading-none text-on-surface" id="hero-days">00</span>
+                    <div class="flex flex-wrap justify-center items-center gap-3 md:gap-8 ticker-text" id="hero-ticker">
+                        <div class="flex flex-col items-center min-w-[64px]">
+                            <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-on-surface" id="hero-days">00</span>
                             <span class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-2">Days</span>
                         </div>
-                        <span class="font-display-lg text-[64px] leading-none text-primary/40 -mt-6">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="font-display-lg text-[64px] leading-none text-on-surface" id="hero-hours">00</span>
+                        <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-primary/40 -mt-4 md:-mt-6">:</span>
+                        <div class="flex flex-col items-center min-w-[64px]">
+                            <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-on-surface" id="hero-hours">00</span>
                             <span class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-2">Hours</span>
                         </div>
-                        <span class="font-display-lg text-[64px] leading-none text-primary/40 -mt-6">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="font-display-lg text-[64px] leading-none text-on-surface" id="hero-mins">00</span>
+                        <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-primary/40 -mt-4 md:-mt-6">:</span>
+                        <div class="flex flex-col items-center min-w-[64px]">
+                            <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-on-surface" id="hero-mins">00</span>
                             <span class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-2">Mins</span>
                         </div>
-                        <span class="font-display-lg text-[64px] leading-none text-primary/40 -mt-6">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="font-display-lg text-[64px] leading-none text-primary" id="hero-secs">00</span>
+                        <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-primary/40 -mt-4 md:-mt-6">:</span>
+                        <div class="flex flex-col items-center min-w-[64px]">
+                            <span class="font-display-lg text-[40px] md:text-[64px] leading-none text-primary" id="hero-secs">00</span>
                             <span class="font-label-caps text-[10px] text-primary uppercase mt-2">Secs</span>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                 <label class="font-label-caps text-[11px] text-on-surface-variant uppercase ml-1">Event Title</label>
                 <input class="bg-surface-container-highest border-none rounded-xl text-on-surface placeholder:text-on-surface-variant/40 focus:ring-1 focus:ring-primary h-14 px-5 transition-all" id="event-title-input" placeholder="Product Launch..." type="text">
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="flex flex-col gap-2">
                     <label class="font-label-caps text-[11px] text-on-surface-variant uppercase ml-1">Date</label>
                     <input class="bg-surface-container-highest border-none rounded-xl text-on-surface focus:ring-1 focus:ring-primary h-14 px-5 transition-all [color-scheme:dark]" id="event-date-input" type="date">

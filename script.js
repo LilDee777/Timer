@@ -49,22 +49,24 @@ function renderEventList() {
         const isActive = event.isActive;
         const dateStr = event.targetDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
         
-        card.className = `glass-card p-5 rounded-xl flex items-center justify-between transition-all cursor-pointer group active:scale-[0.98] ${isActive ? 'border-l-4 border-primary bg-primary/5 active-glow' : 'hover:border-on-surface-variant/30'}`;
+        card.className = `glass-card p-5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all cursor-pointer group active:scale-[0.98] ${isActive ? 'border-l-4 border-primary bg-primary/5 active-glow' : 'hover:border-on-surface-variant/30'}`;
         
         card.innerHTML = `
-            <div class="flex flex-col" onclick="activateEvent(${event.id})">
+            <div class="flex flex-col flex-1" onclick="activateEvent(${event.id})">
                 <h4 class="font-headline-sm text-[20px] ${isActive ? 'text-on-surface' : 'text-on-surface group-hover:text-primary transition-colors'}">${event.title}</h4>
                 <p class="font-label-caps text-[11px] text-on-surface-variant uppercase">${dateStr}</p>
             </div>
-            <div class="flex items-center gap-6">
-                <button class="material-symbols-outlined text-on-surface-variant hover:text-error transition-colors p-1 active:scale-125" onclick="deleteEvent(${event.id}, event)">delete</button>
-                <div class="hidden md:flex flex-col items-end ticker-text">
+            <div class="flex flex-col items-start sm:items-end gap-3">
+                <div class="flex flex-col items-start sm:items-end ticker-text text-[12px] md:text-[14px]">
                     <span class="${isActive ? 'text-on-surface font-semibold' : 'text-on-surface-variant'}">${getTimeRemainingString(event.targetDate)}</span>
                 </div>
-                ${isActive ? 
-                    '<span class="material-symbols-outlined text-primary" style="font-variation-settings: \'FILL\' 1;">check_circle</span>' : 
-                    `<button onclick="activateEvent(${event.id})" class="font-label-caps text-[10px] text-on-surface-variant border border-on-surface-variant/20 px-3 py-1 rounded-md hover:bg-on-surface-variant/10 transition-colors uppercase hover:border-primary active:bg-primary/20">Activate</button>`
-                }
+                <div class="flex items-center gap-4">
+                    <button class="material-symbols-outlined text-on-surface-variant hover:text-error transition-colors p-1 active:scale-125" onclick="deleteEvent(${event.id}, event)">delete</button>
+                    ${isActive ? 
+                        '<span class="material-symbols-outlined text-primary" style="font-variation-settings: \'FILL\' 1;">check_circle</span>' : 
+                        `<button onclick="activateEvent(${event.id})" class="font-label-caps text-[10px] text-on-surface-variant border border-on-surface-variant/20 px-3 py-1 rounded-md hover:bg-on-surface-variant/10 transition-colors uppercase hover:border-primary active:bg-primary/20">Activate</button>`
+                    }
+                </div>
             </div>
         `;
         container.appendChild(card);
